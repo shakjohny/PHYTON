@@ -1,8 +1,8 @@
 {
-	"name": "DS_ABLS_TGT_EMP_FILE",
+	"name": "DestinationDataset_qsl",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_ABLS_GEN2_TGT_FILE",
+			"referenceName": "AzureDataLakeStorageGen2_LS",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,12 +10,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "emp_data",
-				"fileSystem": "target"
+				"fileName": "targetdata",
+				"folderPath": "targetdata",
+				"fileSystem": "container2"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []

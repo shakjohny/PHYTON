@@ -1,8 +1,8 @@
 {
-	"name": "DS_ABLS_TGT_EMP_FILE",
+	"name": "DS_ABLS_TIMES_TARGET_CSV",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_ABLS_GEN2_TGT_FILE",
+			"referenceName": "LS_ABLS_practice1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,15 +10,13 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "emp_data",
-				"fileSystem": "target"
+				"folderPath": "projectz/target/times",
+				"fileSystem": "sales"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
