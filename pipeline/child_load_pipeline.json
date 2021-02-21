@@ -118,6 +118,10 @@
 										"type": "String"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "Metadata_SQLDB_LS",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
