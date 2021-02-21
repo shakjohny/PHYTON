@@ -5,11 +5,11 @@
 		"annotations": [],
 		"type": "Oracle",
 		"typeProperties": {
-			"connectionString": "host=localhost;port=1521;sid=XE;user id=hr",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2YmM4ZDVlYS1lZWY0LTQzMjktOTczMC02MWY1OGNhM2U4ZWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "host=localhost;port=1521;sid=ORCL;user id=scott",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlZDRhYTY1Mi05NTI2LTQ2MWEtYjk3Ny1hYThlZDk4NGEwNjUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "selfhosted-integrationruntime",
+			"referenceName": "SelfHosted-IntegrationRuntime",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
