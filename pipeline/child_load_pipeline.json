@@ -118,10 +118,6 @@
 										"type": "String"
 									}
 								}
-							},
-							"linkedServiceName": {
-								"referenceName": "Metadata_SQLDB_LS",
-								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -154,47 +150,7 @@
 									}
 								},
 								"enableStaging": false
-							},
-							"inputs": [
-								{
-									"referenceName": "Source_ADLS_DS",
-									"type": "DatasetReference",
-									"parameters": {
-										"FolderPath": {
-											"value": "@pipeline().parameters.SourceStore_Location",
-											"type": "Expression"
-										},
-										"Directory": {
-											"value": "@pipeline().parameters.SourceStore_Directory",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "Target_BLOB_DS",
-									"type": "DatasetReference",
-									"parameters": {
-										"FolderPath": {
-											"value": "@pipeline().parameters.TargetStore_Location",
-											"type": "Expression"
-										},
-										"Directory": {
-											"value": "@pipeline().parameters.TargetStore_Directory",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "*.csv",
-											"type": "Expression"
-										}
-									}
-								}
-							]
+							}
 						}
 					]
 				}
@@ -213,29 +169,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Source_Folder_Metadata_DS",
-						"type": "DatasetReference",
-						"parameters": {
-							"FolderPath": {
-								"value": "@pipeline().parameters.SourceStore_Location",
-								"type": "Expression"
-							},
-							"Directory": {
-								"value": "@pipeline().parameters.SourceStore_Directory",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "SRC_EMP_CSV_DS",
+						"type": "DatasetReference"
 					},
-					"fieldList": [
-						"childItems"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureDataLakeStoreReadSettings",
 						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			},
