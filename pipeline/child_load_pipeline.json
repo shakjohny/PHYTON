@@ -223,7 +223,13 @@
 							}
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems",
+						"exists",
+						"itemName",
+						"itemType",
+						"lastModified"
+					],
 					"storeSettings": {
 						"type": "AzureDataLakeStoreReadSettings",
 						"recursive": true,
